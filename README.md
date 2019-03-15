@@ -1,5 +1,7 @@
 # Midterm: Story Map
 
+> NOTE: In response to popular demand, midterms are now due *before class* Friday, March 22nd rather than Sunday, March 17th.
+
 ## Project Outline
 
 For your midterm project, you will create a story map application for a dataset
