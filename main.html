@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- CSS Imports -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.css" integrity="sha256-YR4HrDE479EpYZgeTkQfgVJq08+277UXxMLbi/YP69o=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!--Left Panel-->
+  <div id="sidebar">
+    <button id="previousbutton" style='float:left'>Previous Page</button>
+    <button id="nextbutton" style='float:right'>Next Page</button><br>
+    <h1 id='mainheading'>Loading</h1><br>
+
+    <label id="text-label1" class='tab'>Loading</label> <br> <br>
+    <label id="text-label2" class='tab'></label> <br><br>
+
+    <div>
+      <label id='infotext' class='infobox'>Click on a property to display its info here.</label>
+    </div>
+    <br><br>
+
+    <div id='infotable'>
+      <table>
+      <tr>
+        <th>Attribute</th>
+        <th>Value</th>
+      </tr>
+      <tr>
+        <td>Total Square Meters</td>
+        <td id='totalsize'></td>
+      </tr>
+      <tr>
+        <td>Bedrooms</td>
+        <td id='nooflivingroom'></td>
+      </tr>
+      <tr>
+        <td>Price per Square Meter</td>
+        <td id='unitprice'></td>
+      </tr>
+      <tr>
+        <td>Total Price</td>
+        <td id='ntotalprice'></td>
+      </tr>
+      <tr>
+        <td>Subway Nearby?</td>
+        <td id='nsubwaynearby'></td>
+      </tr>
+    </table>
+    </div>
+    <br>
+    <div id='inputs'>
+      <div id='inputs1' class='inputbox'>
+        <label>Filter by unit price?</label>
+        <input type="checkbox" id="cbox-input1"><br>
+        <input id="lowerprice" type="text" placeholder="0" value="0" size='5' maxlength='5'>
+        <label> to </label>
+        <input id="upperprice" type="text" placeholder="149884" value="149884" size='6' maxlength='6'>
+      </div>
+      <div id='inputs2' class='inputbox'>
+        <label>Filter by size (square meters)?</label>
+        <input type="checkbox" id="cbox-input2"><br>
+        <input id="lowerarea" type="text" placeholder="0" value="0" size='3' maxlength='3'>
+        <label> to </label>
+        <input id="upperarea" type="text" placeholder="436" value="436" size='3' maxlength='3'>
+      </div>
+      <div id='inputs3' class='inputbox'>
+        <label>Subway access:</label>
+        <select id='subwaydrop'>
+          <option value=0>Any</option>
+          <option value=1>Must be on subway</option>
+          <option value=2>Mustn't be on subway</option>
+        </select><br>
+        <button id="plotbutton">Plot</button>
+      </div>
+      <div id='results' class='inputbox'>
+        <label>We've found </label>
+        <label id='numberofresults'>0</label>
+        <label> results.</lable>
+      </div>
+    </div>
+
+
+  </div>
+
+
+  <!-- Map -->
+  <div id="map" style="position: absolute; right: 0; left: 400px; top: 0; bottom: 0;"></div>
+
+  <!-- Javascript Imports -->
+  <script src="js/jquery-2.2.0.js"></script>
+  <script src="js/leaflet.js"></script>
+  <script src="js/underscore.js"></script>
+
+  <script src="js/main.js"></script>
+  <script src="js/functionsvariables.js"></script>
+  <script src="js/pages.js"></script>
+</body>
+
+</html>
