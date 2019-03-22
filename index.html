@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+  <!-- CSS Imports -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.css" integrity="sha256-YR4HrDE479EpYZgeTkQfgVJq08+277UXxMLbi/YP69o=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="src/style.css" />
+</head>
+
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2 id='title1'>Start</h2>
+    <p id='text1'>Text</p>
+    <a href="#" class="previous round" id='previous'>&#8249;</a>
+    <a href="#" class="next round" id='next'>&#8250;</a>
+    <p id='info'>Yixuan (Emily) Hu's Project for MUSA611 Midterm </p>
+  </div>
+
+  <!-- Map -->
+  <div id="map" class="map">
+    <!-- Legend -->
+    <div class="legend">
+      <h4 class='legend-title'>Total Rent (Est.)</h4>
+      <ul class="legend-list">
+        <li id="price1">~$1,000</li>
+        <li id="price2">$1,000-1,200</li>
+        <li id="price3">$1,200-1,300</li>
+        <li id="price4">$1,300~ </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <!-- Javascript Imports -->
+  <script src="src/underscore.js"></script>
+  <script src="src/jquery-2.2.0.js"></script>
+  <script src="data/apartments.json"></script>
+  <script src="data/SEPTAGISRegionalRailLines2012.geojson"></script>
+  <script src="data/SEPTAGISRegionalRailStations2016.geojson"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.js" integrity="sha256-6BZRSENq3kxI4YYBDqJ23xg0r1GwTHEpvp3okdaIqBw=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="js/map.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/slide.js"></script>
+</body>
+
+</html>
