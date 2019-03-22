@@ -37,12 +37,13 @@ body {
 
 #backgroundImage {
   z-index: -1;
-  position: relative;
+  position: absolute;
   left: 0px;
-  bottom: -20px;
-  top:540px;
+  right:400px;
+  bottom: 10px;
+  top:auto;
   width: 400px;
-  height: auto;
+  height: 80px;
 }
 
 #text{
@@ -88,7 +89,7 @@ body {
 #next {
   position:absolute;
   top: auto;
-  left:270px;
+  left:300px;
   right: auto;
   bottom: 20px;
   background-color: #339966;
