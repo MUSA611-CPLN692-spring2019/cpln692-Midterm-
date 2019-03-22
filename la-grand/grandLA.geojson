@@ -1,0 +1,919 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#ed462f",
+        "marker-size": "medium",
+        "marker-symbol": "star",
+        "name": "The Grand",
+        "type": "mixed-use",
+        "has-housing": true,
+        "year-built": 2021,
+        "stories": 39,
+        "distance": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.2489502429962,
+          34.05488610928646
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "grocery",
+        "name": "G & G Market",
+        "type": "grocery",
+        "year-built": 1961,
+        "has-housing": false,
+        "stories": 2,
+        "distance": 0.9
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.238779,
+          34.060109
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "grocery",
+        "name": "Marukai Market",
+        "type": "grocery",
+        "has-housing": false,
+        "year-built": 1981,
+        "stories": 2,
+        "distance": 0.6
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.242375,
+          34.050124
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "grocery",
+        "name": "6th Street Market",
+        "type": "grocery",
+        "has-housing": true,
+        "year-built": 1928,
+        "stories": 14,
+        "distance": 0.8
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.251487,
+          34.04618
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "grocery",
+        "name": "Valeria's Groceries",
+        "type": "grocery",
+        "has-housing": true,
+        "year-built": 1910,
+        "stories": 6,
+        "distance": 0.6
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.248924,
+          34.05072
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "grocery",
+        "name": "Mcbride Ag Foods",
+        "type": "grocery",
+        "has-housing": true,
+        "year-built": 1950,
+        "stories": 8,
+        "distance": 0.7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.247039,
+          34.047928
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "grocery",
+        "name": "Whole Foods Market",
+        "type": "grocery",
+        "has-housing": true,
+        "year-built": 2016,
+        "stories": 7,
+        "distance": 0.8
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.257472,
+          34.046221
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "grocery",
+        "name": "Tony's Market",
+        "type": "grocery",
+        "has-housing": true,
+        "year-built": 1950,
+        "stories": 6,
+        "distance": 0.6
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.249817,
+          34.048689
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "grocery",
+        "name": "Nijiya Market",
+        "type": "grocery",
+        "has-housing": false,
+        "year-built": 1990,
+        "stories": 1,
+        "distance": 0.8
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.240374,
+          34.0487
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "grocery",
+        "name": "Chanh Thai Inc",
+        "type": "grocery",
+        "has-housing": false,
+        "year-built": 1979,
+        "stories": 1,
+        "distance": 1
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.239023,
+          34.06271
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "grocery",
+        "name": "Lian Shing Hong",
+        "type": "grocery",
+        "has-housing": false,
+        "year-built": 1979,
+        "stories": 2,
+        "distance": 0.9
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.239721,
+          34.061771
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "grocery",
+        "name": "Far East Center",
+        "type": "grocery",
+        "has-housing": false,
+        "year-built": 1940,
+        "stories": 1,
+        "distance": 1
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.238664,
+          34.061314
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "grocery",
+        "name": "Yue Wa Market",
+        "type": "grocery",
+        "has-housing": false,
+        "year-built": 1961,
+        "stories": 2,
+        "distance": 0.9
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.239254,
+          34.060176
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "grocery",
+        "name": "Duc Hiep Co Inc",
+        "type": "grocery",
+        "has-housing": false,
+        "year-built": 1979,
+        "stories": 1,
+        "distance": 0.9
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.239243,
+          34.059964
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "bus",
+        "name": "1st & Grand Ave E",
+        "type": "transit",
+        "transit-type": "bus",
+        "distance": 0.07
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.24842453002928,
+          34.05530832894018
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "bus",
+        "name": "1st St & Hope St E",
+        "type": "transit",
+        "transit-type": "bus",
+        "distance": 0.1
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.249606,
+          34.056139
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "bus",
+        "name": "Olive Ave & 1st St E",
+        "type": "transit",
+        "transit-type": "bus",
+        "distance": 0.2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.248082,
+          34.054453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "bus",
+        "name": "1st & Hill",
+        "type": "transit",
+        "transit-type": "bus",
+        "distance": 0.2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.246882,
+          34.054399
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "rail-metro",
+        "name": "Civic Center/Grand Park",
+        "type": "transit",
+        "transit-type": "subway",
+        "distance": 0.2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.247022,
+          34.054236
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "bus",
+        "name": "Temple St & Hill St",
+        "type": "transit",
+        "transit-type": "bus",
+        "distance": 0.2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.247252,
+          34.056788
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "bus",
+        "name": "Hope St & Temple St",
+        "type": "transit",
+        "transit-type": "bus",
+        "distance": 0.2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.248969,
+          34.057523
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "bus",
+        "name": "Grand & Temple",
+        "type": "transit",
+        "transit-type": "bus",
+        "distance": 0.2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.246734,
+          34.057979
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "bus",
+        "name": "Grand Ave & 2nd St W",
+        "type": "transit",
+        "transit-type": "bus",
+        "distance": 0.08
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.250267,
+          34.054328
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "bus",
+        "name": "Grand Ave & 2nd St W",
+        "type": "transit",
+        "transit-type": "bus",
+        "distance": 0.3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.25104,
+          34.053119
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "bicycle",
+        "name": "Grand & 3rd",
+        "type": "transit",
+        "transit-type": "bike-share",
+        "distance": 0.1
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.250793,
+          34.05343
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "bicycle",
+        "name": "2nd & Hill",
+        "type": "transit",
+        "transit-type": "bike-share",
+        "distance": 0.2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.248272,
+          34.053137
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "museum",
+        "name": "The Broad",
+        "type": "museum",
+        "distance": 0.08,
+        "rating": 4.6
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.250323,
+          34.054404
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "museum",
+        "type": "museum",
+        "name": "The Museum of Contemporary Art",
+        "distance": 0.1,
+        "rating": 4.5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.25072,
+          34.053417
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "museum",
+        "name": "Wells Fargo Museum",
+        "type": "museum",
+        "distance": 0.2,
+        "rating": 4.2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.251922,
+          34.05291
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "museum",
+        "name": "The Main Museum of Los Angeles",
+        "type": "museum",
+        "rating": 4.3,
+        "distance": 0.7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.247815,
+          34.048239
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "museum",
+        "name": "The Geffen Museum at MOCA",
+        "type": "museum",
+        "rating": 4.4,
+        "distance": 0.9
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.238528,
+          34.050546
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "museum",
+        "name": "Japanese American National Museum",
+        "type": "museum",
+        "rating": 4.6,
+        "distance": 0.9
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.238549,
+          34.049688
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "museum",
+        "name": "Chinese American Museum",
+        "type": "museum",
+        "rating": 4.7,
+        "distance": 0.8
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.239082,
+          34.055879
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "museum",
+        "name": "Plaza Firehouse",
+        "type": "museum",
+        "rating": 4.3,
+        "distance": 0.8
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.238784,
+          34.056048
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "museum",
+        "name": "Museum of Social Justice",
+        "type": "museum",
+        "rating": 5,
+        "distance": 0.9
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.238116,
+          34.0569
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "museum",
+        "name": "Avila Adobe",
+        "type": "museum",
+        "rating": 4.5,
+        "distance": 0.9
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.237975,
+          34.057297
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "museum",
+        "name": "Sepulveda House Museum",
+        "type": "museum",
+        "rating": 4,
+        "distance": 0.9
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.238187,
+          34.057687
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "museum",
+        "name": "America Tropical Interpretive Center",
+        "type": "museum",
+        "rating": 4.3,
+        "distance": 0.9
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.238045,
+          34.057694
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "museum",
+        "name": "The Italian American Museum of Los Angeles",
+        "type": "museum",
+        "rating": 4.6,
+        "distance": 1
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.237716,
+          34.058065
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "museum",
+        "name": "Velveteria: The Museum of Velvet Art",
+        "type": "museum",
+        "rating": 4.6,
+        "distance": 0.9
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.238612,
+          34.06046
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "park",
+        "name": "Grand Park",
+        "type": "park",
+        "distance": 0.3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.245555,
+          34.055544
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "park",
+        "name": "Circle Park",
+        "type": "park",
+        "distance": 0.4
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.243571,
+          34.052879
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "park",
+        "name": "Angel's Knoll",
+        "type": "park",
+        "distance": 0.3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.250537,
+          34.051126
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "park",
+        "name": "Pershing Square",
+        "type": "park",
+        "distance": 0.6
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.252883,
+          34.048656
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "park",
+        "name": "Biddy Mason Memorial Park",
+        "type": "park",
+        "distance": 0.5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.248082,
+          34.049986
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "park",
+        "name": "Spring Street Park",
+        "type": "park",
+        "distance": 0.7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.248568,
+          34.04803
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "park",
+        "name": "Los Angeles Plaza Park",
+        "type": "park",
+        "distance": 0.8
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.238756,
+          34.056696
+        ]
+      }
+    }
+  ]
+}
