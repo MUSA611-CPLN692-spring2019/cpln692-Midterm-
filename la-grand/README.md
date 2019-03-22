@@ -1,4 +1,4 @@
-# la-grand
+# Assessing TOD in Downtown LA
 CPLN692-Midterm
 
-This will be updated later.
+Please refer to narrative in index.html.
