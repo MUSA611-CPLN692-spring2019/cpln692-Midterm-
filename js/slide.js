@@ -135,15 +135,26 @@ var buttonChange = () => {
   }
 }
 
+var legendChange = () => {
+  if(currentSlide < 2) {
+    $(".legend").hide()
+  } else {
+    $(".legend").show()
+  }
+}
+
 buildSlide(slides[currentSlide]);
 buttonChange();
+legendChange();
 $("#next").click(() => {
   currentSlide = currentSlide + 1;
   buttonChange();
+  legendChange();
   buildSlide(slides[currentSlide]);
 })
 $("#previous").click(() => {
   currentSlide = currentSlide - 1;
   buttonChange();
+  legendChange();
   buildSlide(slides[currentSlide]);
 })
