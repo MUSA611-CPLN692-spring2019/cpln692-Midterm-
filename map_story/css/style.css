@@ -1,0 +1,49 @@
+body {
+    padding: 0;
+    overflow: hidden;
+    font-family: helvetica, arial, sans-serif;
+}
+
+.map {
+    position: absolute;
+    right: 0px;
+    left: 380px;
+    height: 100%;
+    top: 0;
+}
+
+.title {
+  left: 50px;
+}
+
+.text {
+  left: 30px;
+}
+
+.sidebar {
+    position: absolute;
+    left: 0px;
+    width: 340px;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.prev_button {
+  position: relative;
+  float: left;
+}
+
+.nxt_button {
+  position: relative;
+  float: right;
+}
+
+.str_filter {
+  position: relative;
+}
+
+.ftr_button {
+  position: relative;
+}

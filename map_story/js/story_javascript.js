@@ -238,7 +238,6 @@ var pastmarkers=[];
     addTitle(slideObject.title);
     //check what ajax call to run depending on what slide
     if (currentSlide == 0) {
-      map.setView([37.7749, -122.4194], zoom = 12);
       $(document).ready(function() {
         $.ajax(data_neigh).done(function(data) {
           var parsedData = JSON.parse(data).features;
@@ -250,7 +249,6 @@ var pastmarkers=[];
         });
       });
     } else if (currentSlide == 1) {
-      map.setView([37.7749, -122.4194], zoom = 8);
       $.ajax(data_rest).done(function(ajaxResponseValue){
         // array of objects into json
         var computedValue = JSON.parse(ajaxResponseValue).features;
@@ -266,7 +264,6 @@ var pastmarkers=[];
         featureGroup_out=allMarkers;
       });
     } else if (currentSlide == 2){
-      map.setView([37.7749, -122.4194], zoom = 12);
           $.ajax(data_rest).done(function(ajaxResponseValue){
           // array of objects into json
           var computedValue = JSON.parse(ajaxResponseValue).features;
@@ -290,7 +287,9 @@ var pastmarkers=[];
           });
         });
       } else if (currentSlide == 3) {
-        map.setView([37.7911, -122.3891], zoom = 14);
+        //how to reset map center?
+        
+
         $.ajax(data_popos).done(function(ajaxResponseValue){
           // array of objects into json
           var computedValue = JSON.parse(ajaxResponseValue);
@@ -315,7 +314,6 @@ var pastmarkers=[];
           }
         });
       } else if (currentSlide == 4) {
-        map.setView([37.7911, -122.3891], zoom = 14);
         $.ajax(data_popos).done(function(ajaxResponseValue){
             // array of objects into json
             var computedValue = JSON.parse(ajaxResponseValue);
