@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- CSS Imports -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.css" integrity="sha256-YR4HrDE479EpYZgeTkQfgVJq08+277UXxMLbi/YP69o=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div id="intro">
+        <h1 id="title">Housing Price of Beijing City</h1>
+        <p id="main">The housing price of Beijing rocketed during the past
+          decades. This is a group of maps showing samples of properties in Beijing. The following maps would show properties with high toatl price, high unit price, within school district 1 as well as built after 2010. You can also click the circles on the maps to check out their detailed information on the following slides!</p>
+        <hr>
+      </div>
+      <div>
+        <button id="previous"> Previous </button>
+        <button id="next"> Next </button>
+      </div>
+      <div id="info">
+        <p id="propertyName"></p>
+        <p id="propertyArea"></p>
+        <p id="propertyPrice"></p>
+        <p id="yearOfBuilt"></p>
+      </div>
+    </div>
+
+    <!-- Map -->
+    <div id="map" class="map"></div>
+
+    <!-- Legend -->
+    <div class="legend">
+        <h2>Legend</h2>
+        <div id="legend0" style="display: none">
+            <div id="circle0"></div>
+            <div id="circle1"></div>
+            <div id="circle2"></div>
+            <div id="circle3"></div>
+            <div id="legendText">
+              <div id="text1">1 bedroom</div>
+              <div id="text1">2 bedrooms</div>
+              <div id="text1">3 bedrooms</div>
+              <div id="text1">4 bedrooms</div>
+            </div>
+        </div>
+        <div id="legend1" style="display: none">
+            <div id="circle0"></div>
+            <div id="circle1"></div>
+            <div id="circle2"></div>
+            <div id="circle3"></div>
+            <div id="legendText">
+              <div id="text1">less than ￥2,000,000</div>
+              <div id="text1">￥2,000,000 to ￥4,000,000</div>
+              <div id="text1">￥4,000,000 to ￥6,000,000</div>
+              <div id="text1">more than ￥6,000,000</div>
+            </div>
+        </div>
+        <div id="legend2" style="display: none">
+            <div id="circle0"></div>
+            <div id="circle1"></div>
+            <div id="circle2"></div>
+            <div id="circle3"></div>
+            <div id="legendText">
+              <div id="text1">less than ￥25,000</div>
+              <div id="text1">￥25,000 to ￥35,000</div>
+              <div id="text1">￥35,000 to ￥45,000</div>
+              <div id="text1">more than ￥45,000</div>
+            </div>
+        </div>
+        <div id="legend3" style="display: none">
+            <div id="circle0"></div>
+            <div id="legendText">Property within School District 1</div>
+        </div>
+        <div id="legend4" style="display: none">
+            <div id="circle0"></div>
+            <div id="legendText">Property built after 2000</div>
+        </div>
+      </div>
+
+      <div class="image">
+        <img src="Beijing CBD.jpg" alt="Beijing CBD" width="400" height=auto>
+      </div>
+
+      <div class="box"></div>
+
+
+
+    <!-- Javascript Imports -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.js" integrity="sha256-6BZRSENq3kxI4YYBDqJ23xg0r1GwTHEpvp3okdaIqBw=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore.js" integrity="sha256-O4179En8zabOlPYBNvGp8cF0uh0vnSZpW4Q6Ul1h+8c=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
