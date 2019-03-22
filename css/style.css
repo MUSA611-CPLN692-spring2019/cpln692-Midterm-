@@ -1,0 +1,49 @@
+body {
+    padding: 0;
+    overflow: hidden;
+    font-family: colfax, helvetica, arial, sans-serif;
+}
+
+p.main {
+  font-size: 24px;
+}
+
+.header{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 75px;
+  background-color: #000000;
+  color: #ffffff;
+  width: 100%;
+  padding-left: 25px;
+}
+
+.sidebar {
+  position: absolute;
+  left: 0;
+  width: 400px;
+  top: 75px;
+  bottom: 0;
+  padding: 20px;
+  overflow: auto;
+  background-color: #eeeeee;
+
+}
+
+.map {
+    position: absolute;
+    right: 0px;
+    left: 400px;
+    height: 100%;
+    top: 75px;
+}
+
+.btnLine{
+  position: absolute;
+  bottom: 0 px;
+}
+
+.btn{
+  padding: 40 px;
+}

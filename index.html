@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- CSS Imports -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <!-- <link rel="stylesheet" href="css/leaflet.css" /> -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.css" integrity="sha256-YR4HrDE479EpYZgeTkQfgVJq08+277UXxMLbi/YP69o=" crossorigin="anonymous" />
+  </head>
+
+  <body>
+    <!-- Sidebar -->
+    <div class="header"> <h1>US Hospital Distribution</h1></div>
+    <div class="sidebar">
+      <div id="intro">
+        <h1>Five Squares of Philadelphia</h1>
+        <p> Philadelphia's central city was created in the 17th century following
+            the plan by William Penn. </p>
+
+        <p> The city was laid out between current day South Street and Vine street and included
+            five public squares. The squares were renamed in 1824:</p>
+
+            <ul>
+                <li>Northeast Square (Franklin Square)</li>
+                <li>Southeast Square (Washington Square) </li>
+                <li>Southwest Square (Rittenhouse Square)</li>
+                <li>Northwest Square (Logan Circle/Square)</li>
+                <li>Centre Square (Penn Square)</li>
+            </ul>
+
+      </div>
+      <span class = "btnLine">
+        <button class = "btn" id = "bck"><strong>Previous</strong></button>
+        <button class = "btn" id = "nxt"><strong>Next</strong></button>
+      </span>
+
+    </div>
+    <!-- Map -->
+    <div id="map" class="map"></div>
+    <!-- Javascript Imports -->
+    <script src="js/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="js/midtermFunctions.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- <script src="js/main.js"></script> -->
+  </body>
+  </html>
