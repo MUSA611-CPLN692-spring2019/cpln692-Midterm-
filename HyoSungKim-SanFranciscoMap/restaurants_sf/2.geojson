@@ -1,0 +1,15 @@
+{
+"type": "FeatureCollection",
+"name": "2",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Name": "Acquerello", "description": "2" }, "geometry": { "type": "Point", "coordinates": [ -122.421442, 37.7915485 ] } },
+{ "type": "Feature", "properties": { "Name": "Atelier Crenn", "description": "2" }, "geometry": { "type": "Point", "coordinates": [ -122.4359411, 37.7983412 ] } },
+{ "type": "Feature", "properties": { "Name": "Baumé", "description": "2" }, "geometry": { "type": "Point", "coordinates": [ -122.14307, 37.428218 ] } },
+{ "type": "Feature", "properties": { "Name": "Californios", "description": "2" }, "geometry": { "type": "Point", "coordinates": [ -122.4171285, 37.7554173 ] } },
+{ "type": "Feature", "properties": { "Name": "Commis", "description": "2" }, "geometry": { "type": "Point", "coordinates": [ -122.2549664, 37.824772 ] } },
+{ "type": "Feature", "properties": { "Name": "Lazy Bear", "description": "2" }, "geometry": { "type": "Point", "coordinates": [ -122.4197572, 37.760402 ] } },
+{ "type": "Feature", "properties": { "Name": "SingleThread Farm - Restaurant - Inn", "description": "2" }, "geometry": { "type": "Point", "coordinates": [ -122.8698465, 38.612138 ] } },
+{ "type": "Feature", "properties": { "Name": "ADEGA", "description": "2" }, "geometry": { "type": "Point", "coordinates": [ -121.8583851, 37.3511695 ] } }
+]
+}
