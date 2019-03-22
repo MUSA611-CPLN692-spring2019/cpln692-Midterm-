@@ -1,62 +1,114 @@
-var map = L.map('map', {
-  center: [39.9822, -75.1339],
-  zoom: 12
+(function() {
+var mapDraw = function(layers) {
 
-});
-var Stamen_TonerLite = L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ext}', {
-  attribution: '<a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &#124; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-  minZoom: 0,
-  maxZoom: 20,
-  ext: 'png'
-}).addTo(map);
+  layers = layers || [];
 
-const slideDeck = [{
-  id: 1,
-  name: "first slide",
-  html: `
-  <h1>First Slide</h1>
-  <p>Text for first slide</p>
-  `,
-  center: [39.9822, -75.1339],
-  zoom : 12
-},{
-  id: 2,
-  name: "second slide",
-  html: `
-  <h1>Second Slide</h1>
-  <p>Text for second slide</p>
-  `,
-  center: [39.9821, -75.1340],
-  zoom : 13
-},{
-  id: 3,
-  name: "third slide",
-  html: `
-  <h1>Third Slide</h1>
-  <p>Text for third slide</p>
-  `,
-  center: [39.9821, -75.1340],
-  zoom : 13
-}];
+  if (slideshow.current > -1) {
+    let nextlayers = Object.keys(layers);
+  } else {nextlayers = []}
 
-var slideSetup = function(slideDeck) {
+  // remove existing map layers
+  map.eachLayer(function(leaf) {
+    if (leaf != Stamen_TonerLite) {
+      map.removeLayer(leaf);
+    }
+  });
+
+  // add new layers
+  let names = Object.keys(layers); // layers is list of layers in each slide
+  slideshow.currentlayers = names;
+
+  names.forEach(function(name) {
+    let layer = layers[name];
+    if (!layer) {return;}
+
+    slideshow.leaves.forEach(function(leave){ // leave.leaf is actual leaflet object
+      if (name !== leave.name) {return;}
+
+      leave.leaf.eachLayer(function(l) {
+        if (layer.popup) {
+          l.bindPopup(eval(layer.popup));
+        }
+        if (layer.style) {
+          l.setStyle(eval("("+layer.style+")"));
+        }
+      });
+      leave.leaf.addTo(map);
+      if (layer.bounds) {map.fitBounds(leave.leaf.getBounds());}
+    });
+  });
+};
+
+var slideSetup = function(slides) {
   slideshow = {
-    deck   : slideDeck,
-    ids    : [],
-    current: -1
+    deck   : slides.deck,
+    leaves : slides.leaves,
+    init   : slides.init,
+    current: -1,
+    currentlayers : []
   };
 
+  // part A-1: set up basemap
+  slideshow.init.latLngBounds =
+    L.latLngBounds(
+      L.latLng(slideshow.init.maxBounds.sw),
+      L.latLng(slideshow.init.maxBounds.ne)
+    )
+  map.setMaxBounds(slideshow.init.latLngBounds
+  ).setMinZoom(slideshow.init.minZoom
+  ).setMaxZoom(slideshow.init.maxZoom
+  ).fitBounds(slideshow.init.latLngBounds
+  );
+
+  // part A-2: set up map layers
+  slideshow.leaves.forEach(function(leave) {
+    if (leave.type === "geoJSON") {
+      leave.leaf = L.geoJSON(leave.json);
+    }
+  });
+  mapDraw(slideshow.init.layers);
+
+  // part B: set up slides
   for (let n = 0; n < slideshow.deck.length; n++) {
     let slide = slideshow.deck[n];
-    slideshow.ids.push(String(slide.id));
+
     $('.content').append(`
       <div class="slide n${n}">${slide.html}</div>
     `);
     $('.bar').before(`
       <div class="control n${n} hide">${slide.id}</div>
     `);
-  };
+  }
+
+  // listener for start slides button
+  $('.start').click(function(){
+    slideControl();
+    $('.loading').addClass('hide');
+    $('.control,.slide').not('.loading,.left,.right').removeClass('hide');
+  });
+
+  // listeners for controls
+  $('.left.control').click(function(){slideControl('left')});
+  $('.right.control').click(function(){slideControl('right')});
+  for (let n = 0; n < slideshow.deck.length; n++) {
+    $('.control.n'+n).click(function(){slideControl(n)});
+  }
+
+  // back button, reset display
+  $('.back').click(function(){
+    $('.sidebar-container *,.loading').removeClass('hide').removeClass('active');
+    $('.control,.slide,.back').not('.loading').addClass('hide');
+    mapDraw(slideshow.init.layers);
+    slideshow.current = -1;
+  });
+
+  // change "loading" to start slides button
+  $('.loading.slide').html(slideshow.init.html);
+  $('.title,title').html(slideshow.init.header);
+  $('.start').html('Start slideshow');
+  $('.start').addClass('control');
 }
+
 var slideControl = function(index) {
   let i = typeof index === 'number',    // e.g. 0, 1, 2
       x = typeof index === 'string';    // e.g. left, next
@@ -87,9 +139,10 @@ var slideControl = function(index) {
     $('.slide,.control').removeClass('active');
     $('.n'+newslide).addClass('active');
 
-    $('.control').removeClass('hide');
-    switch (slideshow.newslide) {
+    $('.control,.back').not('.loading').removeClass('hide');
+    switch (newslide) {
       case 0: $('.control.left').addClass('hide'); break;
+
       case (slideshow.deck.length-1):
         $('.control.right').addClass('hide'); break;
     }
@@ -97,16 +150,13 @@ var slideControl = function(index) {
     slideshow.current = newslide;
   }
 
-}
+  // adjust map
 
-var slideshow;
-slideSetup(slideDeck);
-$('.sidebar-container').one('click',function(){
-  slideControl();
-  $('.loading').remove();
-  $('.left.control').click(function(){slideControl('left')});
-  $('.right.control').click(function(){slideControl('right')});
-  for (let n = 0; n < slideshow.deck.length; n++) {
-    $('.control.n'+n).click(function(){slideControl(n)});
-  }
-});
+  mapDraw(slideshow.deck[slideshow.current].layers);
+
+};
+
+// start!
+if (slides) {window.slideshow; slideSetup(slides);}
+else {console.log("Slides not valid")}
+})();
