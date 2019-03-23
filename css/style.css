@@ -22,10 +22,10 @@ p.main {
 .sidebar {
   position: absolute;
   left: 0;
-  width: 400px;
+  width: 360px;
   top: 75px;
   bottom: 0;
-  padding: 20px;
+  padding: 25px;
   overflow: auto;
   background-color: #eeeeee;
 
@@ -41,9 +41,21 @@ p.main {
 
 .btnLine{
   position: absolute;
-  bottom: 0 px;
+  bottom: 20px;
 }
 
 .btn{
-  padding: 40 px;
+  padding: 5px;
+  width: 75px;
+  /* margin-left: 50px;
+  margin-right: 50px; */
+}
+
+#nxt{
+  margin-left: 35px;
+}
+
+#bck {
+  margin-left: 50px;
+  margin-right: 35px;
 }
