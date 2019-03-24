@@ -16,27 +16,24 @@ var Stamen_TonerLite = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{
 var dataURL = "https://opendata.arcgis.com/datasets/a2817bf9632a43f5ad1c6b0c153b0fab_0.geojson";
 var parsedData;
 var slideNum = 0;
+var featureGroup;
+var hospType;
 
 //Data aquisition
 aquireData(dataURL);
-
-// var slides = [
-//   {title: "Distribution of All Hospitals", text: "Access to acute medical care", filter: "", center: [39.8283, -98.5795], zoom: 4},
-//   {title: "General Acute Care Hospitals", text: "Slide 2 test", filter: "none", center: [39.8283, -98.5795], zoom: 4},
-//   {title: "Children's Hospitals", text: "Slide 3 test", filter: "none", center: [39.8283, -98.5795], zoom: 4},
-//   {title: "Self Exploration", text: "", filter: "none", center: [39.8283, -98.5795], zoom: 4},
-//   {title: "Conclusion", text: "Slide 5 test", filter: "none", center: [39.8283, -98.5795], zoom: 4}
-// ]
 
 buildSlide(slides[slideNum]);
 
 $("#nxt").click(() => {
   slideNum = slideNum + 1;
   buildSlide(slides[slideNum]);
-
 });
 
 $('#bck').click(() => {
   slideNum = slideNum - 1;
   buildSlide(slides[slideNum]);
 });
+
+$('#update').click(() => {
+  updateMap();
+})

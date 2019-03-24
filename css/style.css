@@ -13,7 +13,7 @@ p.main {
   left: 0;
   top: 0;
   height: 75px;
-  background-color: #000000;
+  background-color: #000080;
   color: #ffffff;
   width: 100%;
   padding-left: 25px;
@@ -25,7 +25,9 @@ p.main {
   width: 360px;
   top: 75px;
   bottom: 0;
-  padding: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 10px;
   overflow: auto;
   background-color: #eeeeee;
 
@@ -47,9 +49,10 @@ p.main {
 .btn{
   padding: 5px;
   width: 75px;
-  /* margin-left: 50px;
-  margin-right: 50px; */
-}
+  /* background-color: #000080;
+  color: #ffffff */
+
+  }
 
 #nxt{
   margin-left: 35px;
