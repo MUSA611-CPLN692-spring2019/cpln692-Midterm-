@@ -31,7 +31,18 @@
         <h4>Filters</h4>
         State (two letter)  <input type=text id="stateFilter"/> <br>
         <br>
-        Hospital Type: <input type=text id="typeFilter"/> <br>
+        Hospital Type: <select id="typeFilter">
+          <option selected value="GENERAL ACUTE CARE">General Acute Care </option>
+          <option value="CHILDREN">Childrens Hospitals </option>
+          <option value="CHRONIC DISEASE">Chronic Disease Hospitals </option>
+          <option value="CRITICAL ACCESS">Critical Access </option>
+          <option value="LONG TERM CARE">Long Term Care  </option>
+          <option value="MILITARY">Military Hospitals </option>
+          <option value="PSYCHIATRIC">Psychiatric Hospitals </option>
+          <option value="REHABILITATION">Rehab Hospitals </option>
+          <option value="SPECIAL">Special Hospitals </option>
+        </select>
+        <br>
         <br>
         <button class="btn" id="update"> Update Map </button>
 

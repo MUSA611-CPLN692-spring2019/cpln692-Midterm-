@@ -17,59 +17,63 @@ var cngText = (obText) => {
 
 var makeStateFilter = () => {
   var stInput = $('#stateFilter').val();
-  return "STATE == " + stInput.toUpperCase();
+  if(stInput != "") {
+    return 'feature.properties.STATE == "' + stInput.toUpperCase() + '"';
+  } else { return 'feature.properties.STATE !=""'; }
+};
+
+var makeTypeFilter = () => {
+  var typeInput = $('#typeFilter').val();
+  if(typeInput != "") {
+    return 'feature.properties.TYPE == "' + typeInput.toUpperCase() + '"';
+  } else { return 'feature.properties.TYPE != ""'; }
+
 };
 
 var myFilter = function(feature) {
   //console.log(feature.properties.TYPE);
-  return feature.properties.TYPE == hospType;
+  //return feature.properties.TYPE == hospType;
+  //return eval(!(makeStateFilter()));
+  return eval( makeStateFilter() + " & " + makeTypeFilter() );
 };
 
-//takes in data list and writes returns array of markers
-// var makeMarkers = function(pData) {
-//   var tempMarkers = [];
-//   _.each(pData, (dataLine) => {tempMarkers.push(L.circleMarker([dataLine.properties.LATITUDE, dataLine.properties.LONGITUDE],radius=2))});
-//   return tempMarkers;
-// };
-//
-// var plotMarkers = function(marker) {
-//   _.each(marker, (mark) => {
-//     mark.addTo(map);
-//   });
-// };
 
 function createCircleMarker( feature, latlng ){
   // Change the values of these options to change the symbol's appearance
   let options = {
     radius: 4,
-    fillColor: "lightgreen",
-    color: "black",
-    weight: 1,
-    opacity: 1,
-    fillOpacity: 0.8
+    fillColor: "#000080",
+    color: "#000080",
+    weight: 0,
+    opacity: 0.4,
+    fillOpacity: 0.4
   }
   return L.circleMarker( latlng, options );
 }
 
 
 var updateMap = () => {
-  if (typeof featureGroup != "undefined") {map.removeLayer(featureGroup);}
+  if (typeof featureGroup != "undefined") {map.removeLayer(featureGroup);};
+
   featureGroup = L.geoJson(parsedData, {
       pointToLayer: createCircleMarker,
       filter: myFilter
 
     }).addTo(map);
-
 };
 
 var buildSlide = (slideObject) => {
-  hospType = slideObject.hospType;
+  $('#typeFilter').val(slideObject.typeFilter);
+  $('#stateFilter').val(slideObject.stateFilter);
+  //hospType = slideObject.hospType;
   cngTitle(slideObject.title);
   cngText(slideObject.text);
   updateMap();
+  map.fitBounds(featureGroup.getBounds());
+  //map.setView(slideObject.center, slideObject.zoom);
   if(slideNum > 0) {$("#bck").show();} else {$("#bck").hide();}
   if(slideNum < 4) {$("#nxt").show();} else {$("#nxt").hide();}
-  if(slideNum != 4) {$('#filters').hide();} else {$('#filters').show();}
+  if(slideNum != 4) {$('#filters').css("visibility", "hidden");} else {$('#filters').css("visibility", "visible");}
 
 
 };
