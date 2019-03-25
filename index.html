@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- CSS Imports -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <!-- <link rel="stylesheet" href="css/leaflet.css" /> -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.css" integrity="sha256-YR4HrDE479EpYZgeTkQfgVJq08+277UXxMLbi/YP69o=" crossorigin="anonymous" />
+  </head>
+
+  <body>
+    <!-- Sidebar -->
+    <div class="header"> <h1>US Hospital Distribution</h1></div>
+    <div class="sidebar">
+      <div>
+        <h2 id = "Title">Title</h1>
+        <p id = "slideText"> Slide Text </p>
+      </div>
+
+      <div id = "filters">
+        <h4>Filters</h4>
+        State (two letter)  <input type=text id="stateFilter"/> <br>
+        <br>
+        Hospital Type: <select id="typeFilter" value="">
+          <option value="">--All-- </option>
+          <option selected value="GENERAL ACUTE CARE">General Acute Care </option>
+          <option value="CHILDREN">Childrens Hospitals </option>
+          <option value="CHRONIC DISEASE">Chronic Disease Hospitals </option>
+          <option value="CRITICAL ACCESS">Critical Access </option>
+          <option value="LONG TERM CARE">Long Term Care  </option>
+          <option value="MILITARY">Military Hospitals </option>
+          <option value="PSYCHIATRIC">Psychiatric Hospitals </option>
+          <option value="REHABILITATION">Rehab Hospitals </option>
+          <option value="SPECIAL">Special Hospitals </option>
+        </select>
+        <br>
+        <br>
+        <button class="btn" id="update"> Update Map </button>
+
+      </div>
+
+
+      <span class = "btnLine">
+        <button class = "btn" id = "bck"><strong>Previous</strong></button>
+        <button class = "btn" id = "nxt"><strong>Next</strong></button>
+      </span>
+
+    </div>
+    <!-- Map -->
+    <div id="map" class="map"></div>
+    <!-- Javascript Imports -->
+    <script src="js/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore.js" integrity="sha256-O4179En8zabOlPYBNvGp8cF0uh0vnSZpW4Q6Ul1h+8c=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="js/slides.json"></script>
+    <script src="js/midtermFunctions.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- <script src="js/main.js"></script> -->
+  </body>
+  </html>
