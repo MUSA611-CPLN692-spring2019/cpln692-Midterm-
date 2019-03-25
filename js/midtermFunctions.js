@@ -4,6 +4,7 @@ var aquireData = function(datUrl) {
   var downloadData = $.ajax(datUrl).done((dat) => {
     console.log(dat);
     parsedData = dat;
+
   })
 };
 
@@ -52,14 +53,17 @@ function createCircleMarker( feature, latlng ){
 }
 
 
-var updateMap = () => {
+var updateMap = (slideObject) => {
   if (typeof featureGroup != "undefined") {map.removeLayer(featureGroup);};
 
   featureGroup = L.geoJson(parsedData, {
       pointToLayer: createCircleMarker,
       filter: myFilter
-
     }).addTo(map);
+    if(slideNum >= 4) {
+      map.fitBounds(featureGroup.getBounds(), animate=true);
+    } else {map.setView(slideObject.center, slideObject.zoom, animate = true);}
+
 };
 
 var buildSlide = (slideObject) => {
@@ -68,12 +72,15 @@ var buildSlide = (slideObject) => {
   //hospType = slideObject.hospType;
   cngTitle(slideObject.title);
   cngText(slideObject.text);
-  updateMap();
-  map.fitBounds(featureGroup.getBounds());
-  //map.setView(slideObject.center, slideObject.zoom);
+  updateMap(slideObject);
+  // if(slideNum >= 4) {
+  //   map.fitBounds(featureGroup.getBounds());
+  // } else {map.setView(slideObject.center, slideObject.zoom);}
+
+
   if(slideNum > 0) {$("#bck").show();} else {$("#bck").hide();}
-  if(slideNum < 4) {$("#nxt").show();} else {$("#nxt").hide();}
-  if(slideNum != 4) {$('#filters').css("visibility", "hidden");} else {$('#filters').css("visibility", "visible");}
+  if(slideNum < 5) {$("#nxt").show();} else {$("#nxt").hide();}
+  if(slideNum != 5) {$('#filters').css("visibility", "hidden");} else {$('#filters').css("visibility", "visible");}
 
 
 };

@@ -14,24 +14,16 @@
     <div class="header"> <h1>US Hospital Distribution</h1></div>
     <div class="sidebar">
       <div>
-        <h1 id = "Title">Title</h1>
+        <h2 id = "Title">Title</h1>
         <p id = "slideText"> Slide Text </p>
-
-            <ul>
-                <li>Northeast Square (Franklin Square)</li>
-                <li>Southeast Square (Washington Square) </li>
-                <li>Southwest Square (Rittenhouse Square)</li>
-                <li>Northwest Square (Logan Circle/Square)</li>
-                <li>Centre Square (Penn Square)</li>
-            </ul>
-
       </div>
 
       <div id = "filters">
         <h4>Filters</h4>
         State (two letter)  <input type=text id="stateFilter"/> <br>
         <br>
-        Hospital Type: <select id="typeFilter">
+        Hospital Type: <select id="typeFilter" value="">
+          <option value="">--Select a type-- </option>
           <option selected value="GENERAL ACUTE CARE">General Acute Care </option>
           <option value="CHILDREN">Childrens Hospitals </option>
           <option value="CHRONIC DISEASE">Chronic Disease Hospitals </option>

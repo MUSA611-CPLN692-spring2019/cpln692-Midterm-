@@ -20,7 +20,7 @@ var featureGroup;
 var hospType;
 
 //Data aquisition
-aquireData(dataURL);
+aquireData(dataURL)
 
 buildSlide(slides[slideNum]);
 
