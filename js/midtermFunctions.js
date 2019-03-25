@@ -4,7 +4,6 @@ var aquireData = function(datUrl) {
   var downloadData = $.ajax(datUrl).done((dat) => {
     console.log(dat);
     parsedData = dat;
-
   })
 };
 
@@ -59,10 +58,19 @@ var updateMap = (slideObject) => {
   featureGroup = L.geoJson(parsedData, {
       pointToLayer: createCircleMarker,
       filter: myFilter
+    }).bindPopup(function(layer) {
+      return layer.feature.properties.NAME;
     }).addTo(map);
     if(slideNum >= 4) {
       map.fitBounds(featureGroup.getBounds(), animate=true);
     } else {map.setView(slideObject.center, slideObject.zoom, animate = true);}
+    
+    featureGroup.on('hover', function(e) {
+      this.openPopup();
+    } )
+    featureGroup.on('mouseout', function(e) {
+      this.closePopup();
+    })
 
 };
 
@@ -80,7 +88,7 @@ var buildSlide = (slideObject) => {
 
   if(slideNum > 0) {$("#bck").show();} else {$("#bck").hide();}
   if(slideNum < 5) {$("#nxt").show();} else {$("#nxt").hide();}
-  if(slideNum != 5) {$('#filters').css("visibility", "hidden");} else {$('#filters').css("visibility", "visible");}
+  if(slideNum <= 4) {$('#filters').css("visibility", "hidden");} else {$('#filters').css("visibility", "visible");}
 
 
 };
