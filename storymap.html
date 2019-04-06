@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Xiaoqi Tang Mid-term</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+
+    <link rel="stylesheet" href="css/leaflet-sidebar.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        html, body, #map {
+            height: 100%;
+            font: 10pt "Helvetica Neue", Arial, Helvetica, sans-serif;
+        }
+
+        .lorem {
+            font-style: italic;
+            color: #AAA;
+        }
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+</head>
+<body>
+
+    <div id="sidebar" class="sidebar collapsed">
+        <!-- Nav tabs -->
+        <div class="sidebar-tabs">
+            <ul role="tablist">
+                <li><a href="#home" role="tab"><i class="fa fa-bars"></i></a></li>
+                <li><a href="#profile" role="tab"><i class="fa fa-user"></i></a></li>
+                <li class="disabled"><a href="#messages" role="tab"><i class="fa fa-envelope"></i></a></li>
+                <li><a href="https://github.com/XiaoqiTang/Portfolio" role="tab" target="_blank"><i class="fa fa-github"></i></a></li>
+            </ul>
+
+            <ul role="tablist">
+                <li><a href="#settings" role="tab"><i class="fa fa-gear"></i></a></li>
+            </ul>
+        </div>
+
+        <!-- Tab panes -->
+        <div class="sidebar-content">
+            <div class="sidebar-pane" id="home">
+                <h1 class="sidebar-header">
+                    Road Trip Map - Route 66
+                    
+                    <span class="sidebar-close"><i class="fa fa-caret-left"></i></span>
+                </h1>
+                
+                <h4 id="Name">Route 66 start site</h4>
+                <img id="Img" class="menu-img" src="img/1.jpg"/>
+                <p id="Description"><b>Description:</b> Historic Route 66 Begin Sign</p>
+                <p id="Duration"><b>Duration:</b> 10 min</p>
+                <div style="position: absolute;bottom:5px;right:5px;">
+
+                    <button class="btn btn-info" onclick="goback()">BACK</button>
+                    <button class="btn btn-info" onclick="gonext()">NEXT</button>    
+                </div>
+                
+            </div>
+
+            <div class="sidebar-pane" id="profile">
+                <h1 class="sidebar-header">Profile<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+                <h4>Author: Xiaoqi Tang</h4>
+                <h5>Details about me and my portfolio can be found in my website:</h5>
+                <h5>http://www.xiaoqitang.com </h5>
+            </div>
+
+            <div class="sidebar-pane" id="messages">
+                <h1 class="sidebar-header">Messages<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+            </div>
+
+            <div class="sidebar-pane" id="settings">
+                <h1 class="sidebar-header">Settings<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+            </div>
+        </div>
+    </div>
+
+    <div id="map" class="sidebar-map"></div>
+
+    <a href="https://github.com/XiaoqiTang/Portfolio"><img style="position: fixed; top: 0; right: 0; border: 0;"</a>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+    <script src="js/leaflet-sidebar.js"></script>
+    <script src="data/r66.geojson"></script>
+    <script>
+        
+
+        // get a base line
+        var lineCoordinate = [];
+        for(var i in rdata_66.features){
+          var pointJson = rdata_66.features[i];
+          var coord = pointJson.geometry.coordinates;
+          lineCoordinate.push([coord[1],coord[0]]);
+        }
+
+        var curr_img = 1;
+
+        var map = L.map('map');
+        map.setView([37.0902, -95.7129], 4);
+
+        L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 18,
+            attribution: 'Map data &copy; OpenStreetMap contributors'
+        }).addTo(map);
+        //L.polyline(lineCoordinate, {color: 'lightblue'}).addTo(map);
+
+
+        var photoIcon = new L.Icon({
+            iconUrl: 'img/icon/photo.png',
+            iconSize:    [35, 35],
+            iconAnchor:  [12, 41],
+            popupAnchor: [1, -34]
+        });
+        var restaurantIcon = new L.Icon({
+            iconUrl: 'img/icon/restaurant.png',
+            iconSize:    [35, 35],
+            iconAnchor:  [12, 41],
+            popupAnchor: [1, -34]
+        });
+        var hotelIcon = new L.Icon({
+            iconUrl: 'img/icon/hotel.png',
+            iconSize:    [35, 35],
+            iconAnchor:  [12, 41],
+            popupAnchor: [1, -34]
+        });
+
+
+        function onEachFeature(feature, layer) {
+            layer.bindPopup('<h4>'+feature.properties.name+'</h4>');
+            layer.on('click', function (e) {
+                var temp_src = "img/"+layer.feature.properties.id+".jpg";
+                $('#Img').attr('src',temp_src);
+                $('#Name').html("layer.feature.properties.name")
+                $('#Description').html("<b>Description: </b>"+layer.feature.properties.description)
+                $('#Duration').html("<b>Duration: </b>"+layer.feature.properties.minute+" min")
+                curr_img = layer.feature.properties.id;
+                map.flyTo(layer._latlng,7)
+              
+
+            });
+            
+        }
+        var rdata66_point=L.geoJSON(rdata_66, {
+            pointToLayer: function(feature, latlng) {
+                var temp_icon;
+                if (feature.properties.category=="photo") {
+                    temp_icon=photoIcon;
+                } else if (feature.properties.category=="resturant") {
+                    temp_icon=restaurantIcon;
+                } else {
+                    temp_icon=hotelIcon;
+                }
+                return L.marker(latlng, {
+                    icon: temp_icon
+                });
+            },
+            onEachFeature: onEachFeature
+        }).addTo(map);
+        var sidebar = L.control.sidebar('sidebar').addTo(map);
+
+
+
+
+        // Utility
+        function goback() {
+            if (curr_img==1) {
+                curr_img = rdata_66.features.length;
+                var temp_src = "img/"+curr_img+".jpg";
+                $('#Img').attr('src',temp_src);
+                $('#Name').html(rdata_66.features[curr_img-1].properties.name)
+                $('#Description').html("<b>Description: </b>"+rdata_66.features[curr_img-1].properties.description)
+                $('#Duration').html("<b>Duration: </b>"+rdata_66.features[curr_img-1].properties.minute+" min")
+
+
+                var curr_geo = rdata_66.features[rdata_66.features.length-1].geometry.coordinates;
+                map.flyTo([curr_geo[1],curr_geo[0]],7);
+
+
+                rdata66_point.getLayers()[curr_img-1].openPopup();
+            } else {
+                curr_img = curr_img - 1;
+                var temp_src = "img/"+curr_img+".jpg";
+                $('#Img').attr('src',temp_src);
+                $('#Name').html(rdata_66.features[curr_img-1].properties.name)
+                $('#Description').html("<b>Description: </b>"+rdata_66.features[curr_img-1].properties.description)
+                $('#Duration').html("<b>Duration: </b>"+rdata_66.features[curr_img-1].properties.minute+" min")
+                
+                var curr_geo = rdata_66.features[curr_img-1].geometry.coordinates;
+                map.flyTo([curr_geo[1],curr_geo[0]],7)
+
+                rdata66_point.getLayers()[curr_img-1].openPopup();
+            }
+        }
+        function gonext() {
+            if (curr_img==rdata_66.features.length) {
+                curr_img = 1;
+                var temp_src = "img/"+curr_img+".jpg";
+                $('#Img').attr('src',temp_src);
+                $('#Name').html(rdata_66.features[curr_img-1].properties.name)
+                $('#Description').html("<b>Description: </b>"+rdata_66.features[curr_img-1].properties.description)
+                $('#Duration').html("<b>Duration: </b>"+rdata_66.features[curr_img-1].properties.minute+" min")
+
+                var curr_geo = rdata_66.features[1].geometry.coordinates;
+                map.flyTo([curr_geo[1],curr_geo[0]],7);
+
+                rdata66_point.getLayers()[curr_img-1].openPopup();
+            } else {
+                curr_img = curr_img + 1;
+                var temp_src = "img/"+curr_img+".jpg";
+                $('#Img').attr('src',temp_src);
+                $('#Name').html(rdata_66.features[curr_img-1].properties.name)
+                $('#Description').html("<b>Description: </b>"+rdata_66.features[curr_img-1].properties.description)
+                $('#Duration').html("<b>Duration: </b>"+rdata_66.features[curr_img-1].properties.minute+" min")
+                
+                var curr_geo = rdata_66.features[curr_img-1].geometry.coordinates;
+                map.flyTo([curr_geo[1],curr_geo[0]],7)
+
+                rdata66_point.getLayers()[curr_img-1].openPopup();
+            }
+        }
+
+
+    </script>
+</body>
+</html>

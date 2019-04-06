@@ -1,0 +1,425 @@
+var rdata_66 = {
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.6243,41.8795 ]
+    },
+    "properties": {
+    "id":1,
+    "category":"photo",
+    "name":"Route 66 start site",
+    "description":"Historic Route 66 Begin Sign",
+    "minute":10
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.2101,41.2653 ]
+    },
+    "properties": {
+    "id":2,
+    "category":"resturant",
+    "name":"Polk-A-Dot Drive In",
+    "description":"Nostalgic 1950s-style roadside diner known for burgers, malts & chili-cheese fries.",
+    "minute":10
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -91.3962,38.0646 ]
+    },
+    "properties": {
+    "id":3,
+    "category":"hotel",
+    "name":"Wagon Wheel Motel",
+    "description":"Located 2 miles from Cuba Lakes Golf and Counry Club, this historic motel, open since the 1930s, is 7.7 miles from the Meramec Music Theatre.",
+    "minute":500
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.0662,37.8525 ]
+    },
+    "properties": {
+    "id":4,
+    "category":"resturant",
+    "name":"Elbow Inn Bar & BBQ",
+    "description":"Raucous BBQ eatery offering pool, darts & live music in a low-key, old-school setting.",
+    "minute":80
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.369,37.1736 ]
+    },
+    "properties": {
+    "id":5,
+    "category":"photo",
+    "name":"66 Drive-In Theatre",
+    "description":"Retro, drive-in movie theater with a big screen featuring current films, plus a concession stand.",
+    "minute":30
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.6389,37.0803 ]
+    },
+    "properties": {
+    "id":6,
+    "category":"resturant",
+    "name":"Cars on the Route",
+    "description":"Comfort food",
+    "minute":40
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.878,36.8723 ]
+    },
+    "properties": {
+    "id":7,
+    "category":"photo",
+    "name":"Route 66 Vintage Iron Motorcycle Musum",
+    "description":"Opened in 2006, this museum houses rare & vintage motorcycles, gear & memorabilia, plus a gift shop.",
+    "minute":60
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.4481,36.4375 ]
+    },
+    "properties": {
+    "id":8,
+    "category":"photo",
+    "name":"Ed Galloway's Totem Pole Park",
+    "description":"Completed in 1961, this folk-art park features elaborate carved totems created by Ed Galloway.",
+    "minute":30
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.7352,36.1908 ]
+    },
+    "properties": {
+    "id":9,
+    "category":"photo",
+    "name":"Blue Whale of Catoosa",
+    "description":"Large Route 66 roadside whale, built in 1972 on a small pond with a nearby picnicking area.",
+    "minute":40
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.9309,36.1344 ]
+    },
+    "properties": {
+    "id":10,
+    "category":"photo",
+    "name":"Golden Driller",
+    "description":"Iconic, 75-ft. statue of an oil driller with his hand resting on an oil derrick.",
+    "minute":60
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.9555,36.0479 ]
+    },
+    "properties": {
+    "id":11,
+    "category":"photo",
+    "name":"Prayer Tower",
+    "description":"An icon recognized throughout the world, the Prayer Tower of Oral Roberts University is situated at the center of the campus to symbolize the importance of prayer. A separate area within the Prayer Tower houses the offices of the men's and women's chaplains. Graduate assistants for spiritual life will also work in this area.",
+    "minute":60
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.6545,35.7488 ]
+    },
+    "properties": {
+    "id":12,
+    "category":"resturant",
+    "name":"Rock Cafe",
+    "description":"Comfort food",
+    "minute":120
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -97.326,35.6623 ]
+    },
+    "properties": {
+    "id":13,
+    "category":"photo",
+    "name":"Arcadia Round Barn",
+    "description":"A round, red 1898 barn, now a historic roadside attraction & popular Route 66 pit stop.",
+    "minute":60
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -97.3355,35.6583 ]
+    },
+    "properties": {
+    "id":14,
+    "category":"photo",
+    "name":"Pops Arcadia",
+    "description":"Landmark diner & gas station with hundreds of sodas, a shop & a 66-ft.-tall soda bottle out front.",
+    "minute":40
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -98.6597,35.5384 ]
+    },
+    "properties": {
+    "id":15,
+    "category":"resturant",
+    "name":"Lucille's Road House",
+    "description":"Enduring roadside pit stop with a Route 66-themed, retro diner & upscale steakhouse/cocktail lounge.",
+    "minute":100
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -98.987,35.506 ]
+    },
+    "properties": {
+    "id":16,
+    "category":"photo",
+    "name":"Oklahoma Route 66 Museum",
+    "description":"A look at the history, myths, signs, photos & music of the iconic road, plus a diner replica.",
+    "minute":100
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -99.8667,35.2139 ]
+    },
+    "properties": {
+    "id":17,
+    "category":"photo",
+    "name":"Sandhill Curiosity Shop",
+    "description":"Sand Hills Curiosity Shop un Eric, Oklahoma.\nThanks to Harley for his time. If you travel through Mother Road you must stop and visit Harley. He is amazing and friendly man, he will sing for you and take pics.",
+    "minute":60
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -100.5974,35.2314 ]
+    },
+    "properties": {
+    "id":18,
+    "category":"photo",
+    "name":"Devil's Rope Museum",
+    "description":"Lots of hands on exhibits, good place to check out some history",
+    "minute":90
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -100.5979,35.2266 ]
+    },
+    "properties": {
+    "id":19,
+    "category":"photo",
+    "name":"Cross of our Lord Jesus Christ Ministries",
+    "description":"Great place to remind people of what is truly important in life",
+    "minute":60
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -101.3843,35.2149 ]
+    },
+    "properties": {
+    "id":20,
+    "category":"photo",
+    "name":"VW Slug Bug Ranch",
+    "description":"Very cool old gas station and remnants of a road side town from the past",
+    "minute":20
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -101.7551,35.1936 ]
+    },
+    "properties": {
+    "id":21,
+    "category":"resturant",
+    "name":"The Big Texan Steak Ranch & Brewery",
+    "description":"Kitschy, saloon-style steakhouse offering patrons a 72-oz. steak challenge & a souvenir gift shop.",
+    "minute":90
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -102.6731,35.2707 ]
+    },
+    "properties": {
+    "id":22,
+    "category":"resturant",
+    "name":"MidPoint Cafe",
+    "description":"50s-style pit stop featuring classic American grub, including breakfast & pie, plus a gift shop.",
+    "minute":90
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -103.7165,35.1721 ]
+    },
+    "properties": {
+    "id":23,
+    "category":"hotel",
+    "name":"Blue Swallow Motel",
+    "description":"Marked by a classic neon sign, this landmark Route 66 motel dating from 1939 is an 11-minute walk from the Dinosaur Museum and Natural Sciences Laboratory at Mesalands College.",
+    "minute":500
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -109.7816,35.0658 ]
+    },
+    "properties": {
+    "id":24,
+    "category":"photo",
+    "name":"Petrified Forest National Park",
+    "description":"Picturesque natural attraction with many petrified tree trunks & fossils, plus ranger-led tours.",
+    "minute":300
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -110.9025,34.9025 ]
+    },
+    "properties": {
+    "id":25,
+    "category":"hotel",
+    "name":"Wigwam Motel",
+    "description":"Located a mile off Interstate 40, this quirky 1937 motel with lodging in 15 concrete-and-steel freestanding teepees is 13 miles from Petrified Forest National Park.",
+    "minute":500
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -111.02,35.02 ]
+    },
+    "properties": {
+    "id":26,
+    "category":"photo",
+    "name":"Meteor Crater",
+    "description":"Ancient meteorite impact site with a modest interpretive center, theater, gift shop & concessions.",
+    "minute":60
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -112.873,35.3262 ]
+    },
+    "properties": {
+    "id":27,
+    "category":"resturant",
+    "name":"Delgadillo's Snow Cap",
+    "description":"Kitschy drive-in with eclectic Route 66/Americana decor & a classic menu of burgers, malts & shakes.",
+    "minute":90
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -117.3397,34.69 ]
+    },
+    "properties": {
+    "id":28,
+    "category":"photo",
+    "name":"Elmer's Bottle Tree Ranch",
+    "description":"A magical, whimsical garden created from a variety of discarded objects. There were many funny, playful surprises throughout. Park on the side of the road, and it’s free to enter. It felt a bit scary/creepy going in at first, as nobody else was around, but as soon as I began to wander, my initial hesitation was replaced by joy. Be sure to drop something in the “TIPS” wishing well near the back to help support the imaginative artist (Elmer, I presume) who created Bottle Brush Ranch, so he can continue to add more to his collection of masterpieces!",
+    "minute":40
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -117.2946,34.1255 ]
+    },
+    "properties": {
+    "id":29,
+    "category":"photo",
+    "name":"Historic McDonald's museum",
+    "description":"Fast-food chain serving Mexican-style rotisserie chicken, slow-cooked in a signature marinade.",
+    "minute":20
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -118.5361,34.0359 ]
+    },
+    "properties": {
+    "id":30,
+    "category":"photo",
+    "name":"Santa Monica Beach (End)",
+    "description":"Landmark beach next to the Pier featuring a 3-mile coastline, mountain views & walking/biking paths.",
+    "minute":10
+    }
+  }
+]
+}
