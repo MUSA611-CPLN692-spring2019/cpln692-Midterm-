@@ -1,0 +1,7 @@
+.menu-img {
+	width:100%;
+}
+
+.menu-img:hover {
+  background-color: yellow;
+}
