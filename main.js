@@ -52,7 +52,33 @@ var buildSlide = (slideObject) => {
   addText(slideObject.text)
 };
 
+var buttonChange = () => {
+  if (currentSlide == 0) {
+    $("#previous").hide()
+  } else {
+    $("#previous").show()
+  }
+  if (currentSlide == 3) {
+    $("#next").hide()
+  } else {
+    $("#next").show()
+  }
+}
+
 buildSlide(slides[currentSlide]);
+buttonChange();
+$("#next").click(() => {
+  currentSlide = currentSlide + 1;
+  buttonChange();
+  legendChange();
+  buildSlide(slides[currentSlide]);
+})
+$("#previous").click(() => {
+  currentSlide = currentSlide - 1;
+  buttonChange();
+  legendChange();
+  buildSlide(slides[currentSlide]);
+})
 
 //hide the previous button on slide [0]
 $("#previous").hide();
@@ -75,6 +101,14 @@ $("#next").click(() => {
 //  if(current)
 // });
 
+// remove title and text when updating slides
+var cleanup = () => {
+  $('#title').remove()
+  $('#text').remove()
+}
+
+
+
 
 // 1. Function to map the array of restaurants
 
@@ -95,13 +129,19 @@ CLTrestos.forEach(function(restaurant) {addMarker(restaurant)});
 
 // first filter: reviews 4 stars or above
 
-var fourStarsAbove = CLTrestos.filter(restaurant => restaurant.stars >= 4);
-console.log(fourStarsAbove);
+var fourStarsAbove = (restaurant) => {
+  CLTrestos.filter(restaurant => restaurant.stars >= 4);
+  console.log(fourStarsAbove);
+  console.log([restaurant.longitude, restaurant.latitude]);
+  var marker = L.marker([restaurant.latitude, restaurant.longitude]);
+};
 
 // second filter: reviews 2 stars or below
 
-var twoStarsBelow = CLTrestos.filter(restaurant => restaurant.stars <= 2);
-console.log(twoStarsBelow);
+//var twoStarsBelow = (restaurant) => {
+//  CLTrestos.filter(restaurant => restaurant.stars <= 2);
+//  console.log(twoStarsBelow);
+//  console.log([restauran])
 
 // third filter: restaurant with most reviews in Charlotte
 
@@ -110,6 +150,11 @@ console.log(moreThanTwoThousand);
 
 // 3. Create arrays of the different map requests
 
+//var addData = () => {
+//  featureGroup = L.geoJson(CLTrestos, {
+//    filter: function()
+//  })
+//}
 
 
 // 4. Create a button to move from one array of map requests to the next
