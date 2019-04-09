@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- CSS Imports -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/leaflet.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+
+
+    <!-- =====================
+
+    The purpose of this Midterm is to look at Charlotte's restaurant scene, particularly
+    looking at some of the best rated, worst rated, and most reviewed restaurants in
+    the city.
+
+    ====================== -->
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+          <div id="intro">
+          <h1 id= "title">Welcome! to Charlotte Restaurant Insider </h1>
+          <p id="main"> This tool will help you understand the best, worst, and most frequented restaurants in Charlotte, North Carolina, according to Yelp users. </p>
+          <hr>
+        </div>
+        <div>
+          <button id="previous"> Previous </button>
+          <button id="next"> Next </button>
+        </div>
+
+        <div id="info">
+          <p id="Restaurant Name"></p>
+          <p id="Number of Reviews"></p>
+          <p id="Star Rating"></p>
+        </div>
+      </div>
+
+    <!-- Map -->
+    <div id="map" class="map"></div>
+
+    <!-- Javascript Imports -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.js?fbclid=IwAR2EtGibj6W1ah1oZDTrEe94s4cnLhF89iB8R3cj8oTEzPdc_j0vk57nMpk"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.css" integrity="sha256-YR4HrDE479EpYZgeTkQfgVJq08+277UXxMLbi/YP69o=" crossorigin="anonymous" />
+    <script src="js/underscore.js"></script>
+    <script src="js/jquery-2.2.0.js"></script>
+    <script src="data/restaurants_charlotte.json"></script>
+    <script src="js/main.js"></script>
+
+  </body>
+</html>
